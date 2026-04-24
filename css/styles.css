@@ -1111,3 +1111,478 @@ button {
     }
     .reveal { opacity: 1; transform: none; }
 }
+
+/* ============================================================
+   NAV ACTIVE STATE
+   ============================================================ */
+.nav__links a.is-active {
+    color: var(--white);
+}
+.nav__links a.is-active::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--gold);
+}
+.nav__links li a { position: relative; }
+
+/* ============================================================
+   PAGE HERO (inner pages)
+   ============================================================ */
+.page-hero {
+    position: relative;
+    padding: 10rem var(--gutter) 5rem;
+    background: radial-gradient(ellipse at top left, rgba(201, 169, 97, 0.05) 0%, transparent 50%),
+                var(--black);
+    overflow: hidden;
+}
+.page-hero__grain {
+    position: absolute;
+    inset: 0;
+    opacity: 0.03;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.page-hero > .container { position: relative; z-index: 2; }
+.page-hero__headline {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    color: var(--white);
+    margin: 1.5rem 0 2rem;
+}
+.page-hero__headline .serif-italic {
+    font-weight: 400;
+    display: block;
+}
+.page-hero__sub {
+    font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+    line-height: 1.6;
+    color: var(--white-70);
+    max-width: 56ch;
+}
+
+/* ============================================================
+   TIER CARDS (pricing)
+   ============================================================ */
+.tiers {
+    padding-top: 3rem;
+}
+.tiers__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+.tier {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr 1.2fr;
+    gap: 2.5rem;
+    align-items: center;
+    padding: 2.5rem 3rem;
+    background: var(--black-surface);
+    border: 1px solid var(--white-08);
+    transition: border-color 0.3s var(--ease-out), transform 0.3s var(--ease-out);
+}
+.tier:hover {
+    border-color: var(--gold-muted);
+    transform: translateY(-2px);
+}
+
+.tier--featured {
+    border-color: var(--gold);
+    background: linear-gradient(to bottom right, rgba(201, 169, 97, 0.04), transparent 70%), var(--black-surface);
+}
+.tier--featured:hover {
+    border-color: var(--gold-bright);
+}
+
+.tier__badge {
+    position: absolute;
+    top: -1px;
+    right: 2rem;
+    background: var(--gold);
+    color: var(--black);
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    padding: 0.45rem 0.875rem;
+    line-height: 1;
+}
+
+.tier__head {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.tier__name {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(1.5rem, 2.2vw, 1.875rem);
+    letter-spacing: 0.04em;
+    color: var(--white);
+    text-transform: uppercase;
+}
+.tier__cadence {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+}
+
+.tier__price-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.tier__price {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(2.5rem, 4.5vw, 3.5rem);
+    letter-spacing: -0.025em;
+    color: var(--white);
+    line-height: 1;
+    position: relative;
+}
+.tier__currency {
+    font-size: 0.5em;
+    vertical-align: top;
+    margin-right: 0.1em;
+    color: var(--white-55);
+    font-weight: 500;
+}
+.tier__per {
+    font-size: 0.32em;
+    font-weight: 500;
+    color: var(--white-55);
+    letter-spacing: 0;
+    margin-left: 0.15em;
+}
+
+.tier__stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+    grid-column: 2;
+}
+.tier__stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+}
+.tier__stat-num {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--white);
+    line-height: 1;
+}
+.tier__stat-label {
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--white-55);
+}
+
+.tier__desc {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--white-70);
+    grid-column: 3;
+    grid-row: 1;
+    margin: 0;
+}
+
+.tier__cta {
+    grid-column: 3;
+    grid-row: 2;
+    justify-self: start;
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-decoration: none;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--gold-muted);
+    transition: color 0.2s, border-color 0.2s, letter-spacing 0.2s;
+}
+.tier__cta:hover {
+    color: var(--gold-bright);
+    border-bottom-color: var(--gold-bright);
+    letter-spacing: 0.26em;
+}
+
+/* For Monarch 6, price + stats are column 2, but we need to make grid work */
+.tier > .tier__head { grid-column: 1; grid-row: 1 / span 2; }
+.tier > .tier__price-block { grid-column: 2; grid-row: 1; }
+.tier > .tier__stats { grid-column: 2; grid-row: 2; }
+.tier > .tier__desc { grid-column: 3; grid-row: 1; align-self: start; padding-top: 0.5rem; }
+.tier > .tier__cta { grid-column: 3; grid-row: 2; align-self: start; }
+
+/* ============================================================
+   $750 SETUP SECTION
+   ============================================================ */
+.setup {
+    text-align: center;
+    background: var(--black);
+    border-top: 1px solid var(--white-08);
+    border-bottom: 1px solid var(--white-08);
+}
+.setup .eyebrow {
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.setup .section__headline {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.setup__copy {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--white-70);
+    max-width: 52ch;
+    margin: 0 auto 1.5rem;
+}
+.setup__copy--accent {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.35rem;
+    color: var(--gold);
+    margin-top: 2rem;
+}
+
+/* ============================================================
+   ALWAYS INCLUDED
+   ============================================================ */
+.included .section__headline {
+    margin-bottom: 3.5rem;
+}
+.included__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0;
+    max-width: 860px;
+}
+.included__item {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 2rem;
+    align-items: start;
+    padding: 2rem 0;
+    border-top: 1px solid var(--white-08);
+}
+.included__item:last-child {
+    border-bottom: 1px solid var(--white-08);
+}
+.included__mark {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    padding-top: 0.3rem;
+}
+.included__item h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.35rem;
+    letter-spacing: -0.005em;
+    color: var(--white);
+    margin: 0 0 0.5rem;
+}
+.included__item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--white-70);
+    margin: 0;
+    max-width: 60ch;
+}
+.included__item em {
+    color: var(--gold);
+    font-style: italic;
+    font-family: var(--font-serif);
+    font-weight: 400;
+}
+
+/* ============================================================
+   HOW TO PICK
+   ============================================================ */
+.pick {
+    text-align: center;
+}
+.pick .eyebrow { justify-content: center; }
+.pick .section__headline { text-align: center; margin-bottom: 3rem; }
+.pick__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 720px;
+    margin: 0 auto 2.5rem;
+}
+.pick__row {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background: var(--black-surface);
+    border: 1px solid var(--white-08);
+    text-align: left;
+}
+.pick__scenario {
+    font-size: 1rem;
+    color: var(--white-80);
+    text-align: right;
+    font-weight: 400;
+}
+.pick__arrow {
+    color: var(--gold);
+    font-size: 1.25rem;
+}
+.pick__pick {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+    color: var(--white);
+    text-align: left;
+    text-transform: uppercase;
+}
+.pick__note {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.15rem;
+    line-height: 1.55;
+    color: var(--white-70);
+    max-width: 54ch;
+    margin: 0 auto;
+}
+
+/* ============================================================
+   MINI FAQ
+   ============================================================ */
+.mini-faq .section__headline { margin-bottom: 3rem; }
+.mini-faq__list {
+    margin: 0 0 2.5rem;
+    padding: 0;
+    max-width: 760px;
+}
+.mini-faq__item {
+    padding: 1.75rem 0;
+    border-top: 1px solid var(--white-08);
+}
+.mini-faq__item:last-child {
+    border-bottom: 1px solid var(--white-08);
+}
+.mini-faq__item dt {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: -0.005em;
+    color: var(--white);
+    margin-bottom: 0.625rem;
+}
+.mini-faq__item dd {
+    font-size: 0.975rem;
+    line-height: 1.6;
+    color: var(--white-70);
+    margin: 0;
+    max-width: 62ch;
+}
+.mini-faq__more {
+    padding-top: 1.5rem;
+}
+
+/* ============================================================
+   RESPONSIVE — PROGRAMS PAGE
+   ============================================================ */
+@media (max-width: 1024px) {
+    .page-hero { padding-top: 8rem; padding-bottom: 3.5rem; }
+
+    .tier {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem 2rem;
+        padding: 2rem 2rem;
+    }
+    .tier > .tier__head { grid-column: 1; grid-row: 1; }
+    .tier > .tier__price-block { grid-column: 2; grid-row: 1; align-items: flex-end; }
+    .tier > .tier__price-block { align-items: flex-end; }
+    .tier__price-block { align-items: flex-end; }
+    .tier > .tier__stats { grid-column: 1 / -1; grid-row: 2; padding-top: 0.5rem; border-top: 1px solid var(--white-08); padding-top: 1.25rem; }
+    .tier > .tier__desc { grid-column: 1 / -1; grid-row: 3; padding-top: 0; }
+    .tier > .tier__cta { grid-column: 1 / -1; grid-row: 4; }
+    .tier__badge { right: 1.5rem; }
+}
+
+@media (max-width: 768px) {
+    .page-hero { padding-top: 7rem; padding-bottom: 3rem; }
+
+    .tier {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+        padding: 1.75rem 1.5rem;
+    }
+    .tier > .tier__head,
+    .tier > .tier__price-block,
+    .tier > .tier__stats,
+    .tier > .tier__desc,
+    .tier > .tier__cta {
+        grid-column: 1;
+    }
+    .tier > .tier__head { grid-row: 1; }
+    .tier > .tier__price-block { grid-row: 2; align-items: flex-start; }
+    .tier > .tier__stats { grid-row: 3; gap: 1rem; padding-top: 1rem; border-top: 1px solid var(--white-08); }
+    .tier > .tier__desc { grid-row: 4; padding-top: 0; }
+    .tier > .tier__cta { grid-row: 5; }
+    .tier__badge {
+        position: relative;
+        top: 0;
+        right: 0;
+        align-self: flex-start;
+        margin-bottom: 0.5rem;
+        display: inline-block;
+    }
+    .tier--featured .tier__badge {
+        position: absolute;
+        top: -1px;
+        right: 1.25rem;
+    }
+
+    .included__item {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+    .included__mark {
+        padding-top: 0;
+    }
+
+    .pick__row {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        padding: 1.25rem 1.5rem;
+        text-align: center;
+    }
+    .pick__scenario,
+    .pick__pick {
+        text-align: center;
+    }
+    .pick__arrow {
+        transform: rotate(90deg);
+    }
+}
