@@ -2248,3 +2248,239 @@ select.is-invalid {
         padding: 1.75rem 1.5rem;
     }
 }
+
+/* ============================================================
+   OUR STORY PAGE
+   Long-form editorial treatment — slow, considered, premium.
+   ============================================================ */
+
+.story-hero {
+    padding-top: 11rem;
+    padding-bottom: 7rem;
+    text-align: center;
+    border-bottom: 1px solid var(--white-08);
+}
+.story-hero .eyebrow {
+    justify-content: center;
+}
+.story-hero__headline {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--white);
+    margin: 1.75rem auto 0;
+    max-width: 18ch;
+}
+.story-hero__headline .serif-italic {
+    font-weight: 400;
+    line-height: 1.1;
+    display: inline-block;
+}
+
+/* Story chapter sections */
+.story-scene {
+    padding-top: clamp(4rem, 8vw, 6.5rem);
+    padding-bottom: clamp(4rem, 8vw, 6.5rem);
+    border-bottom: 1px solid var(--white-08);
+}
+.story-scene--alt {
+    background:
+        radial-gradient(ellipse at top right, rgba(201, 169, 97, 0.025) 0%, transparent 50%),
+        var(--black-deep);
+}
+.story-scene--faith {
+    background:
+        radial-gradient(ellipse at center, rgba(201, 169, 97, 0.04) 0%, transparent 60%),
+        var(--black-deep);
+    border-top: 1px solid var(--gold-faint);
+    border-bottom: 1px solid var(--gold-faint);
+}
+
+.story-chapter-num {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.75rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.story-chapter-num::before {
+    content: '';
+    width: 32px;
+    height: 1px;
+    background: var(--gold-line);
+    display: inline-block;
+}
+
+.story-section-headline {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(2rem, 4.5vw, 3.25rem);
+    line-height: 1.05;
+    letter-spacing: -0.022em;
+    color: var(--white);
+    margin: 0 0 2.75rem;
+    max-width: 22ch;
+}
+.story-section-headline .serif-italic {
+    font-weight: 400;
+    line-height: 1.05;
+    display: block;
+}
+
+/* Body prose — the actual reading experience */
+.story-prose {
+    max-width: 64ch;
+}
+.story-prose p {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.72;
+    color: var(--white-80);
+    margin: 0 0 1.5rem;
+    letter-spacing: 0.005em;
+}
+
+.story-prose p:last-child {
+    margin-bottom: 0;
+}
+
+/* Lead paragraph (first sentence in a chapter) */
+.story-lead {
+    font-family: var(--font-display) !important;
+    font-weight: 500 !important;
+    font-size: clamp(1.25rem, 1.8vw, 1.5rem) !important;
+    line-height: 1.4 !important;
+    color: var(--white) !important;
+    letter-spacing: -0.005em !important;
+    margin-bottom: 2rem !important;
+}
+
+/* Inline quote treatment */
+.story-quote-inline {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--gold);
+    letter-spacing: 0.01em;
+}
+
+/* Emphasis — the hard-landing line at end of a chapter */
+.story-emphasis {
+    font-family: var(--font-serif) !important;
+    font-style: italic !important;
+    font-weight: 400 !important;
+    font-size: clamp(1.4rem, 2.2vw, 1.8rem) !important;
+    line-height: 1.35 !important;
+    color: var(--white) !important;
+    letter-spacing: -0.005em !important;
+    padding-top: 1rem;
+    margin-top: 1.5rem !important;
+    border-top: 1px solid var(--gold-faint);
+    max-width: 28ch;
+}
+
+/* Italic emphasis within prose */
+.story-prose em {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--gold);
+    font-weight: 400;
+}
+
+/* Closing chapter */
+.story-close {
+    padding-top: clamp(4rem, 8vw, 6.5rem);
+    padding-bottom: clamp(5rem, 10vw, 8rem);
+    text-align: center;
+    background:
+        radial-gradient(ellipse at center, rgba(201, 169, 97, 0.05) 0%, transparent 65%),
+        var(--black);
+}
+.story-close .story-chapter-num {
+    justify-content: center;
+}
+.story-close .story-chapter-num::before {
+    display: none;
+}
+.story-close .story-section-headline {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 26ch;
+    text-align: center;
+}
+.story-close .story-prose {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 56ch;
+}
+.story-close .story-prose p {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: clamp(1.15rem, 1.7vw, 1.4rem);
+    line-height: 1.55;
+    color: var(--white);
+    letter-spacing: -0.005em;
+    margin-bottom: 1rem;
+}
+
+/* Values row on story page */
+.story-values {
+    justify-content: center;
+    margin: 3rem auto 3.5rem;
+    flex-wrap: wrap;
+}
+
+/* CTA at the bottom of the story */
+.story-cta {
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--white-08);
+    max-width: 540px;
+    margin: 0 auto;
+}
+.story-cta__line {
+    font-family: var(--font-serif) !important;
+    font-style: italic !important;
+    font-size: 1.25rem !important;
+    line-height: 1.4 !important;
+    color: var(--gold) !important;
+    margin: 1.5rem 0 1.75rem !important;
+    font-weight: 400 !important;
+}
+.story-cta__buttons {
+    display: flex;
+    gap: 0.875rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ============================================================
+   STORY RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+    .story-hero {
+        padding-top: 8rem;
+        padding-bottom: 4rem;
+    }
+    .story-prose p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+    .story-emphasis {
+        font-size: 1.3rem !important;
+    }
+    .story-cta__buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .story-cta__buttons .btn {
+        width: 100%;
+    }
+}
