@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Consultation — Monarch</title>
+    <meta name="description" content="Book a free, private consultation with Monarch. Thirty minutes. No pressure. Real answers from a real person who has been where you are.">
+    <meta name="theme-color" content="#0A0A0A">
+
+    <meta property="og:title" content="Book a Consultation — Monarch">
+    <meta property="og:description" content="Free, private, thirty minutes. Real answers from someone who has been where you are.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/images/logos/monarch-logo-white-gold-on-black.png">
+
+    <link rel="icon" type="image/png" href="images/logos/monarch-mark-black-gold.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=Fraunces:ital,wght@1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav">
+    <div class="nav__inner">
+        <a href="index.html" class="nav__logo" aria-label="Monarch home">
+            <span class="nav__logo-text">MONARCH</span>
+        </a>
+        <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__links" id="navLinks">
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="results.html">Results</a></li>
+            <li><a href="story.html">Our Story</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="book.html" class="nav__cta is-active">Book</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- ============ PAGE HERO ============ -->
+<section class="page-hero page-hero--book">
+    <div class="page-hero__grain"></div>
+    <div class="container container--narrow">
+        <div class="eyebrow">
+            <span class="eyebrow__dot"></span>
+            Book a consultation
+        </div>
+        <h1 class="page-hero__headline">
+            Thirty minutes.<br>
+            <span class="serif-italic gold">Real answers.</span>
+        </h1>
+        <p class="page-hero__sub">
+            Free, private, no pressure. A conversation with someone who has actually been where you are &mdash;
+            and built the company he wished existed back then.
+        </p>
+        <ul class="page-hero__promises">
+            <li><span class="promise__check" aria-hidden="true">&#10003;</span> No sales tactics</li>
+            <li><span class="promise__check" aria-hidden="true">&#10003;</span> No obligation</li>
+            <li><span class="promise__check" aria-hidden="true">&#10003;</span> Complete discretion</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ============ BOOKING FORM ============ -->
+<section class="section book">
+    <div class="container container--narrow">
+        <div class="book__layout">
+
+            <!-- LEFT: the form -->
+            <div class="book__form-wrap">
+                <div class="eyebrow">Tell us about you</div>
+                <h2 class="book__form-headline">
+                    Start here.<br>
+                    <span class="serif-italic gold">We'll take it from there.</span>
+                </h2>
+                <p class="book__form-intro">
+                    We read every one of these personally. Give us what you're comfortable sharing &mdash;
+                    we'll reach out within one business day to set up your consultation.
+                </p>
+
+                <form class="book-form" id="bookForm" novalidate>
+
+                    <!-- SECTION 1: WHO -->
+                    <div class="form-group">
+                        <div class="form-group__label">
+                            <span class="form-group__num">01</span>
+                            <span class="form-group__title">Who should we reach out to?</span>
+                        </div>
+                        <div class="form-grid form-grid--2">
+                            <div class="field">
+                                <label for="firstName">First name <span class="req">*</span></label>
+                                <input type="text" id="firstName" name="firstName" required autocomplete="given-name">
+                            </div>
+                            <div class="field">
+                                <label for="lastName">Last name <span class="req">*</span></label>
+                                <input type="text" id="lastName" name="lastName" required autocomplete="family-name">
+                            </div>
+                            <div class="field">
+                                <label for="email">Email <span class="req">*</span></label>
+                                <input type="email" id="email" name="email" required autocomplete="email" inputmode="email">
+                            </div>
+                            <div class="field">
+                                <label for="phone">Phone <span class="req">*</span></label>
+                                <input type="tel" id="phone" name="phone" required autocomplete="tel" inputmode="tel" placeholder="(913) 555-1234">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 2: WHAT'S GOING ON -->
+                    <div class="form-group">
+                        <div class="form-group__label">
+                            <span class="form-group__num">02</span>
+                            <span class="form-group__title">What's going on with your hair?</span>
+                        </div>
+                        <div class="field">
+                            <label for="concern">In your own words. No wrong answers here.</label>
+                            <textarea id="concern" name="concern" rows="4" placeholder="I've been losing hair on the crown for about five years. Tried minoxidil, hats most days now. I'm 34 and it's starting to affect how I show up at work..."></textarea>
+                            <p class="field__hint">Everything you share stays between us. This helps us prepare for your consultation so we don't waste your time with generic questions.</p>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 3: BUDGET -->
+                    <div class="form-group">
+                        <div class="form-group__label">
+                            <span class="form-group__num">03</span>
+                            <span class="form-group__title">What feels right for your budget?</span>
+                        </div>
+                        <div class="field">
+                            <p class="field__hint field__hint--top">This isn't a commitment. It just helps us recommend the right program so the conversation is useful.</p>
+                            <div class="radio-grid">
+                                <label class="radio-card">
+                                    <input type="radio" name="budget" value="350-450">
+                                    <span class="radio-card__inner">
+                                        <span class="radio-card__title">$350 &ndash; $450/mo</span>
+                                        <span class="radio-card__detail">Monarch 4, 5, or 6</span>
+                                    </span>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="budget" value="450-675">
+                                    <span class="radio-card__inner">
+                                        <span class="radio-card__title">$450 &ndash; $675/mo</span>
+                                        <span class="radio-card__detail">Monarch 6, 8, or 12</span>
+                                    </span>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="budget" value="not-sure">
+                                    <span class="radio-card__inner">
+                                        <span class="radio-card__title">Not sure yet</span>
+                                        <span class="radio-card__detail">Help me figure it out</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 4: HOW'D YOU HEAR -->
+                    <div class="form-group">
+                        <div class="form-group__label">
+                            <span class="form-group__num">04</span>
+                            <span class="form-group__title">How did you find us?</span>
+                        </div>
+                        <div class="field">
+                            <select id="source" name="source">
+                                <option value="">Choose one...</option>
+                                <option value="referral">A friend or family member referred me</option>
+                                <option value="former-client">I was a client at Hair Club or another studio</option>
+                                <option value="google">Google search</option>
+                                <option value="social">Instagram, Facebook, or another social platform</option>
+                                <option value="community">Local community or church connection</option>
+                                <option value="other">Something else</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 5: WHEN -->
+                    <div class="form-group">
+                        <div class="form-group__label">
+                            <span class="form-group__num">05</span>
+                            <span class="form-group__title">When works for a call?</span>
+                        </div>
+                        <div class="field">
+                            <p class="field__hint field__hint--top">We'll match your schedule. We do evenings and weekends for discretion.</p>
+                            <div class="check-grid">
+                                <label class="check-card">
+                                    <input type="checkbox" name="availability" value="weekday-morning">
+                                    <span class="check-card__inner">Weekday mornings</span>
+                                </label>
+                                <label class="check-card">
+                                    <input type="checkbox" name="availability" value="weekday-afternoon">
+                                    <span class="check-card__inner">Weekday afternoons</span>
+                                </label>
+                                <label class="check-card">
+                                    <input type="checkbox" name="availability" value="weekday-evening">
+                                    <span class="check-card__inner">Weekday evenings</span>
+                                </label>
+                                <label class="check-card">
+                                    <input type="checkbox" name="availability" value="weekend">
+                                    <span class="check-card__inner">Weekends</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 6: CONSENT -->
+                    <div class="form-group form-group--consent">
+                        <div class="field field--consent">
+                            <label class="consent-check">
+                                <input type="checkbox" id="smsConsent" name="smsConsent">
+                                <span class="consent-check__box" aria-hidden="true"></span>
+                                <span class="consent-check__label">
+                                    <strong>Text me.</strong> You can send appointment reminders and updates by text message. Reply STOP anytime to opt out. Message and data rates may apply. We won't share your number, and we won't send marketing without a separate opt-in.
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- SUBMIT -->
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn--gold btn--lg btn--full" id="submitBtn">
+                            Send my request
+                        </button>
+                        <p class="form-submit__hint">
+                            We'll respond within one business day. Usually sooner.
+                        </p>
+                    </div>
+
+                    <!-- Status messages (hidden by default, shown by JS) -->
+                    <div class="form-status" id="formStatus" aria-live="polite"></div>
+
+                </form>
+            </div>
+
+            <!-- RIGHT: reassurance / alt contact -->
+            <aside class="book__aside">
+
+                <div class="book__card">
+                    <div class="book__card-eyebrow">Prefer to talk first?</div>
+                    <h3 class="book__card-headline">Call us directly.</h3>
+                    <a href="tel:9133263852" class="book__card-phone">913.326.3852</a>
+                    <p class="book__card-detail">Justin or Tina will pick up. If we can't get to the phone, we call back within the hour.</p>
+                </div>
+
+                <div class="book__card book__card--quiet">
+                    <div class="book__card-eyebrow">What happens next</div>
+                    <ol class="book__steps">
+                        <li>
+                            <span class="book__step-num">1</span>
+                            <div>
+                                <strong>We review your note.</strong>
+                                <span>Personally. Not a bot, not a call center.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="book__step-num">2</span>
+                            <div>
+                                <strong>We reach out within a business day.</strong>
+                                <span>By whichever method you prefer.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="book__step-num">3</span>
+                            <div>
+                                <strong>We schedule a 30-minute consultation.</strong>
+                                <span>By phone or in person &mdash; your call. Free either way.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="book__step-num">4</span>
+                            <div>
+                                <strong>You decide what's next.</strong>
+                                <span>If Monarch's the right fit, we'll talk about starting. If not, we'll point you somewhere better.</span>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="book__card book__card--quote">
+                    <blockquote>
+                        <p>"The first person I talked to wasn't a salesperson. It was the owner. He told me his story before he asked for mine. That's when I knew this place was different."</p>
+                        <cite>&mdash; Monarch client, KC Metro</cite>
+                    </blockquote>
+                </div>
+
+            </aside>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============ CALENDAR PLACEHOLDER (for GHL embed) ============ -->
+<!--
+    GHL INTEGRATION POINT
+    When GHL calendar is live, replace the inside of this section with
+    the GHL embed snippet. Keep the outer <section> styling intact.
+-->
+<section class="section calendar-section" id="calendar" style="display: none;">
+    <div class="container container--narrow">
+        <div class="eyebrow">Or pick a time now</div>
+        <h2 class="section__headline">
+            See our calendar<br>
+            <span class="serif-italic gold">and grab a slot.</span>
+        </h2>
+        <div class="calendar-embed" id="calendarEmbed">
+            <!-- GHL embed will drop in here -->
+        </div>
+    </div>
+</section>
+
+<!-- ============ QUIET REASSURANCE ============ -->
+<section class="section reassurance">
+    <div class="container container--narrow">
+        <div class="reassurance__grid">
+            <div class="reassurance__item">
+                <div class="reassurance__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="5" width="18" height="14" rx="2"/>
+                        <path d="M3 9h18"/>
+                    </svg>
+                </div>
+                <h4>No charge to talk</h4>
+                <p>Consultations are always free. We're never going to bill you for a conversation.</p>
+            </div>
+            <div class="reassurance__item">
+                <div class="reassurance__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2L3 7v6c0 5 3.5 9 9 10 5.5-1 9-5 9-10V7l-9-5z"/>
+                    </svg>
+                </div>
+                <h4>Complete discretion</h4>
+                <p>We treat your situation the way you'd want a doctor to. What you share stays with Monarch.</p>
+            </div>
+            <div class="reassurance__item">
+                <div class="reassurance__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M8 12l3 3 6-6"/>
+                        <circle cx="12" cy="12" r="10"/>
+                    </svg>
+                </div>
+                <h4>Zero obligation</h4>
+                <p>If we're not the right fit, we'll say so &mdash; and recommend someone who might be.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer__top">
+            <div class="footer__brand">
+                <img src="images/logos/monarch-logo-white-gold-on-black.png" alt="Monarch" class="footer__logo">
+                <p class="footer__tagline">
+                    Premium hair systems for men.<br>
+                    Built on faith, integrity, and service.
+                </p>
+            </div>
+            <div class="footer__col">
+                <h4>Studio</h4>
+                <ul>
+                    <li>Shawnee, Kansas</li>
+                    <li>Serving the KC Metro</li>
+                    <li><a href="tel:9133263852">913.326.3852</a></li>
+                    <li><a href="mailto:hello@monarch.hair">hello@monarch.hair</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="results.html">Results</a></li>
+                    <li><a href="story.html">Our Story</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Book</h4>
+                <ul>
+                    <li><a href="book.html">Consultation</a></li>
+                    <li><a href="tel:9133263852">By phone</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div>&copy; 2026 Monarch Vitality LLC. All rights reserved.</div>
+            <div>monarch.hair</div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/book.js"></script>
+</body>
+</html>
